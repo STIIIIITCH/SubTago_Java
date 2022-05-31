@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">SubTago_Java</string>
+    <string name="app_name">SubTago</string>
+    <string name="subway">지하철 노선도</string>
+    <string name="transfer">빠른 환승</string>
+    <string name="lift">리프트 예약</string>
+    <string name="convenience">편의시설</string>
 </resources>
