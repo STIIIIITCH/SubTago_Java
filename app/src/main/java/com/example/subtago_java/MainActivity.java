@@ -4,6 +4,7 @@ import androidx.activity.OnBackPressedCallback;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -23,31 +24,40 @@ public class MainActivity extends AppCompatActivity {
         Button btnLift = findViewById(R.id.lift);
         Button btnConvenience = findViewById(R.id.convenience);
 
+        Intent intentSubway = new Intent(this, SubwayActivity.class);
+        Intent intentTransfer = new Intent(this, TransferActivity.class);
+        Intent intentLift = new Intent(this, LiftActivity.class);
+        Intent intentConvenience = new Intent(this, ConvenienceActivity.class);
+
         btnSubway.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                setContentView(R.layout.subway_1);
+                startActivity(intentSubway);
+                finish();
             }
         });
 
         btnTransfer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                setContentView(R.layout.transfer_1);
+                startActivity(intentTransfer);
+                finish();
             }
         });
 
         btnLift.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                setContentView(R.layout.lift_1);
+                startActivity(intentLift);
+                finish();
             }
         });
 
         btnConvenience.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                setContentView(R.layout.convenience_1);
+                startActivity(intentConvenience);
+                finish();
             }
         });
 
