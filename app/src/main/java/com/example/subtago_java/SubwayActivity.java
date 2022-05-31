@@ -2,6 +2,7 @@ package com.example.subtago_java;
 
 import android.Manifest;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationListener;
@@ -21,7 +22,7 @@ import net.daum.mf.map.api.MapPoint;
 import net.daum.mf.map.api.MapView;
 
 public class SubwayActivity extends AppCompatActivity {
-
+    Intent intentMain;
     MapView mapView;
     String provider;
     double longitude;
@@ -80,6 +81,9 @@ public class SubwayActivity extends AppCompatActivity {
         Button btn = findViewById(R.id.btn_now);
         btn.setOnClickListener(myLocation);
 
+        intentMain = new Intent(this, MainActivity.class);
+
+
     }
 
     View.OnClickListener myLocation = new View.OnClickListener() {
@@ -111,5 +115,9 @@ public class SubwayActivity extends AppCompatActivity {
         }
     };
 
-
+    @Override
+    public void onBackPressed() {
+        startActivity(intentMain);
+        finish();
+    }
 }

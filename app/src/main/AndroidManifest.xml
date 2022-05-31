@@ -19,15 +19,13 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                <action android:name=".SubwayActivity" />
-                <action android:name=".TransferActivity" />
-                <action android:name=".LiftActivity" />
-                <action android:name=".ConvenienceActivity" />
-
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".SubwayActivity"/>
+        <activity android:name=".TransferActivity" />
+        <activity android:name=".LiftActivity" />
+        <activity android:name=".ConvenienceActivity" />
 
         <meta-data
             android:name="com.kakao.sdk.AppKey"
