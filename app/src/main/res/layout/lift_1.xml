@@ -3,16 +3,115 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:padding="20dp"
     android:background="@color/background">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="호선 선택"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:gravity="center_horizontal"
+            android:layout_marginBottom="40dp"
+            android:background="#A4C6A5"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_gravity="center"
-        android:text="@string/lift"
-        android:textSize="30dp"
-        android:textColor="@color/black"
-        android:textStyle="bold" />
+        android:gravity="center"
+        android:layout_marginBottom="20dp">
+        <Button
+            android:id="@+id/btnline1"
+            android:layout_width="120dp"
+            android:layout_height="100dp"
+            android:layout_marginRight="54dp"
+            android:backgroundTint="#0D3692"
+            android:text="1호선"/>
+        <Button
+            android:id="@+id/btnline2"
+            android:layout_width="120dp"
+            android:layout_height="100dp"
+            android:backgroundTint="#33A23D"
+            android:text="2호선"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:gravity="center">
+        <Button
+            android:id="@+id/btnline3"
+            android:layout_width="120dp"
+            android:layout_height="100dp"
+            android:layout_marginRight="54dp"
+            android:backgroundTint="#FE5D10"
+            android:text="3호선"/>
+        <Button
+            android:id="@+id/btnline4"
+            android:layout_width="120dp"
+            android:layout_height="100dp"
+            android:backgroundTint="#00A2D1"
+            android:text="4호선"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:gravity="center">
+        <Button
+            android:id="@+id/btnline5"
+            android:layout_width="120dp"
+            android:layout_height="100dp"
+            android:layout_marginRight="54dp"
+            android:backgroundTint="#8B50A4"
+            android:text="5호선"/>
+        <Button
+            android:id="@+id/btnline6"
+            android:layout_width="120dp"
+            android:layout_height="100dp"
+            android:backgroundTint="#C55C1D"
+            android:text="6호선"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:gravity="center">
+        <Button
+            android:id="@+id/btnline7"
+            android:layout_width="120dp"
+            android:layout_height="100dp"
+            android:layout_marginRight="54dp"
+            android:backgroundTint="#54640D"
+            android:text="7호선"/>
+        <Button
+            android:id="@+id/btnline8"
+            android:layout_width="120dp"
+            android:layout_height="100dp"
+            android:backgroundTint="#F14C82"
+            android:text="8호선"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:gravity="left">
+        <Button
+            android:id="@+id/btnline9"
+            android:layout_width="120dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="40dp"
+            android:backgroundTint="#AA9872"
+            android:text="9호선"/>
+    </LinearLayout>
 
 </LinearLayout>

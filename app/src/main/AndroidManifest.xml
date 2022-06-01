@@ -26,6 +26,15 @@
         <activity android:name=".TransferActivity" />
         <activity android:name=".LiftActivity" />
         <activity android:name=".ConvenienceActivity" />
+        <activity android:name=".line1Activity"/>
+        <activity android:name=".line2Activity"/>
+        <activity android:name=".line3Activity"/>
+        <activity android:name=".line4Activity"/>
+        <activity android:name=".line5Activity"/>
+        <activity android:name=".line6Activity"/>
+        <activity android:name=".line7Activity"/>
+        <activity android:name=".line8Activity"/>
+        <activity android:name=".line9Activity"/>
 
         <meta-data
             android:name="com.kakao.sdk.AppKey"
