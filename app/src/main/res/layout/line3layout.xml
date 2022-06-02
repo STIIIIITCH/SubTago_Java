@@ -31,18 +31,21 @@
             android:id="@+id/textLine3Result"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/black"
             android:textSize="15sp"
             android:layout_weight="1"/>
         <TextView
             android:id="@+id/textStation3Result"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/black"
             android:textSize="15sp"
             android:layout_weight="1"/>
         <TextView
             android:id="@+id/textLocation3Result"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/black"
             android:textSize="15sp"
             android:layout_weight="1"/>
     </LinearLayout>
