@@ -46,6 +46,8 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
                 android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#009688"
                 android:layout_weight="1"/>
             <TextView
                 android:id="@+id/textLocation4Result"
@@ -53,6 +55,8 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
                 android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#009688"
                 android:layout_weight="1"/>
         </LinearLayout>
     </ScrollView>

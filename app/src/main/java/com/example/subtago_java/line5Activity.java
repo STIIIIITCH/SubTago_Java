@@ -29,6 +29,33 @@ public class line5Activity extends AppCompatActivity {
         myHelper = new MainActivity.myDBHelper(this);
 
         sqlDB1 = myHelper.getWritableDatabase();
+        sqlDB1.execSQL("INSERT INTO WheelChairTBL VALUES ('5호선','강동','지하 상선승강장')");
+        sqlDB1.execSQL("INSERT INTO WheelChairTBL VALUES ('5호선','강동','지하 대합실')");
+        sqlDB1.execSQL("INSERT INTO WheelChairTBL VALUES ('5호선','광나루(장신대)','지하')");
+        sqlDB1.execSQL("INSERT INTO WheelChairTBL VALUES ('5호선','광나루(세종문화회관)','지하')");
+        sqlDB1.execSQL("INSERT INTO WheelChairTBL VALUES ('5호선','광나루(세종문화회관)','지하 종점')");
+        sqlDB1.execSQL("INSERT INTO WheelChairTBL VALUES ('5호선','광나루(세종문화회관)','지하')");
+        sqlDB1.execSQL("INSERT INTO WheelChairTBL VALUES ('5호선','광나루(세종문화회관)','3번출구')");
+        sqlDB1.execSQL("INSERT INTO WheelChairTBL VALUES ('5호선','까치산','지하 상선B5-B4')");
+        sqlDB1.execSQL("INSERT INTO WheelChairTBL VALUES ('5호선','까치산','지하 하선B5-B4')");
+        sqlDB1.execSQL("INSERT INTO WheelChairTBL VALUES ('5호선','까치산','2번출구')");
+        sqlDB1.execSQL("INSERT INTO WheelChairTBL VALUES ('5호선','답십리','지하')");
+        sqlDB1.execSQL("INSERT INTO WheelChairTBL VALUES ('5호선','동대문역사문화공원','지하 승강장#1')");
+        sqlDB1.execSQL("INSERT INTO WheelChairTBL VALUES ('5호선','동대문역사문화공원','6번출구')");
+        sqlDB1.execSQL("INSERT INTO WheelChairTBL VALUES ('5호선','마장','지하')");
+        sqlDB1.execSQL("INSERT INTO WheelChairTBL VALUES ('5호선','마장','1번출구')");
+        sqlDB1.execSQL("INSERT INTO WheelChairTBL VALUES ('5호선','마천','지하 B4-B2')");
+        sqlDB1.execSQL("INSERT INTO WheelChairTBL VALUES ('5호선','마천','지하 1-13')");
+        sqlDB1.execSQL("INSERT INTO WheelChairTBL VALUES ('5호선','마천','1번출구')");
+        sqlDB1.execSQL("INSERT INTO WheelChairTBL VALUES ('5호선','상일동','지하')");
+        sqlDB1.execSQL("INSERT INTO WheelChairTBL VALUES ('5호선','상일동','4번출구')");
+        sqlDB1.execSQL("INSERT INTO WheelChairTBL VALUES ('5호선','서대문','지하 5,6번출구')");
+        sqlDB1.execSQL("INSERT INTO WheelChairTBL VALUES ('5호선','신길','지하 상선승환통로')");
+        sqlDB1.execSQL("INSERT INTO WheelChairTBL VALUES ('5호선','신길','지하 환승통로')");
+        sqlDB1.execSQL("INSERT INTO WheelChairTBL VALUES ('5호선','영등포구청','지하 상선승환통로')");
+        sqlDB1.execSQL("INSERT INTO WheelChairTBL VALUES ('5호선','영등포구청','지하 환승통로')");
+        sqlDB1.execSQL("INSERT INTO WheelChairTBL VALUES ('5호선','장한평','지하')");
+        sqlDB1.execSQL("INSERT INTO WheelChairTBL VALUES ('5호선','종로3가(탑골공원)','지하')");
 
         sqlDB2 = myHelper.getReadableDatabase();
         Cursor cursor;
