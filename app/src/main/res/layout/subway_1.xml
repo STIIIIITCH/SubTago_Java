@@ -44,6 +44,16 @@
         android:backgroundTint="@color/black"
         android:completionThreshold="1" />
 
+    <AutoCompleteTextView
+        android:id="@+id/end_station"
+        android:padding="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="도착역"
+        android:textColor="@color/black"
+        android:textColorHint="#8E8E8E"
+        android:backgroundTint="@color/black"
+        android:completionThreshold="1" />
 
 <!--<androidx.constraintlayout.widget.ConstraintLayout-->
 <!--    android:layout_width="match_parent"-->
