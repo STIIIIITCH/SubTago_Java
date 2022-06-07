@@ -17,29 +17,39 @@
         android:textColor="@color/black"
         android:textStyle="bold" />
 
-    <Button
-        android:id="@+id/btn_now"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#A1A1A1"
-        android:text="현재 위치 불러오기"
-        android:layout_gravity="center"/>
+<!--    <Button-->
+<!--        android:id="@+id/btn_now"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:backgroundTint="#A1A1A1"-->
+<!--        android:text="현재 위치 불러오기"-->
+<!--        android:layout_gravity="center"/>-->
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="현재 가까운 역은"
+        android:text="출발할 역을 선택하세요."
         android:layout_marginTop="20dp"
         android:layout_marginLeft="20dp"
         android:textColor="@color/black"/>
-<androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
 
-        <RelativeLayout
-            android:id="@+id/mapView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+    <AutoCompleteTextView
+        android:id="@+id/start_station"
+        android:padding="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="출발역"
+        android:completionThreshold="1" />
+
+
+<!--<androidx.constraintlayout.widget.ConstraintLayout-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent">-->
+
+<!--        <RelativeLayout-->
+<!--            android:id="@+id/mapView"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent" />-->
 
 <!--    <net.daum.mf.map.api.MapView-->
 <!--        android:id="@+id/mapView"-->
@@ -48,5 +58,5 @@
 <!--        app:layout_constraintBottom_toBottomOf="parent"-->
 <!--        app:layout_constraintEnd_toEndOf="parent"-->
 <!--        app:layout_constraintStart_toStartOf="parent" />-->
-</androidx.constraintlayout.widget.ConstraintLayout>
+<!--</androidx.constraintlayout.widget.ConstraintLayout>-->
 </LinearLayout>

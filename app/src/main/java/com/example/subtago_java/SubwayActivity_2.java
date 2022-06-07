@@ -19,7 +19,7 @@
 //import net.daum.mf.map.api.MapPoint;
 //import net.daum.mf.map.api.MapView;
 //
-//public class SubwayActivity2 {
+//public class SubwayActivity_2 {
 //    Intent intentMain;
 //    MapView mapView;
 //    String provider;
@@ -29,8 +29,8 @@
 //
 //    @Override
 //    protected void onCreate(Bundle savedInstanceState) {
-////        super.onCreate(savedInstanceState);
-////        setContentView(R.layout.subway_1);
+//        super.onCreate(savedInstanceState);
+//        setContentView(R.layout.subway_1);
 //
 //        // 위치 권한 요청 코드
 //        int permissionCheck = ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION);
