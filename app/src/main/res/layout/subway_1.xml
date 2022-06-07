@@ -28,7 +28,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="출발할 역을 선택하세요."
+        android:text="출발할 역을 입력하세요."
         android:layout_marginTop="20dp"
         android:layout_marginLeft="20dp"
         android:textColor="@color/black"/>
