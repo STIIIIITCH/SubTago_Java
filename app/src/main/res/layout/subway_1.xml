@@ -40,6 +40,7 @@
         android:layout_height="wrap_content"
         android:hint="출발역"
         android:textColor="@color/black"
+        android:backgroundTint="@color/black"
         android:completionThreshold="1" />
 
 
