@@ -24,6 +24,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
+        android:layout_marginTop="40dp"
         android:layout_marginBottom="20dp">
         <Button
             android:id="@+id/btnline1"
@@ -100,7 +101,7 @@
             android:text="8호선"/>
     </LinearLayout>
 
-    <LinearLayout
+   <!-- <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
@@ -112,6 +113,6 @@
             android:layout_marginLeft="40dp"
             android:backgroundTint="#AA9872"
             android:text="9호선"/>
-    </LinearLayout>
+    </LinearLayout>-->
 
 </LinearLayout>

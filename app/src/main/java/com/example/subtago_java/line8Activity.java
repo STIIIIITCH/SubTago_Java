@@ -29,6 +29,19 @@ public class line8Activity extends AppCompatActivity {
         myHelper = new MainActivity.myDBHelper(this);
 
         sqlDB1 = myHelper.getWritableDatabase();
+        sqlDB1.execSQL("INSERT INTO WheelChairTBL VALUES ('8호선','남한산성입구','4번출구')");
+        sqlDB1.execSQL("INSERT INTO WheelChairTBL VALUES ('8호선','남한산성입구','지하 4번출구-2')");
+        sqlDB1.execSQL("INSERT INTO WheelChairTBL VALUES ('8호선','모란','지하 환승수진측')");
+        sqlDB1.execSQL("INSERT INTO WheelChairTBL VALUES ('8호선','모란','지하 환승복정측')");
+        sqlDB1.execSQL("INSERT INTO WheelChairTBL VALUES ('8호선','복정','3번출구')");
+        sqlDB1.execSQL("INSERT INTO WheelChairTBL VALUES ('8호선','수진','3번출구')");
+        sqlDB1.execSQL("INSERT INTO WheelChairTBL VALUES ('8호선','잠실(송파구청)','지하 1-5')");
+        sqlDB1.execSQL("INSERT INTO WheelChairTBL VALUES ('8호선','잠실(송파구청)','지하 1-6')");
+        sqlDB1.execSQL("INSERT INTO WheelChairTBL VALUES ('8호선','잠실(송파구청)','지하 1-7')");
+        sqlDB1.execSQL("INSERT INTO WheelChairTBL VALUES ('8호선','천호(풍납토성)','지하 1-1')");
+        sqlDB1.execSQL("INSERT INTO WheelChairTBL VALUES ('8호선','천호(풍납토성)','지하 1-2')");
+        sqlDB1.execSQL("INSERT INTO WheelChairTBL VALUES ('8호선','천호(풍납토성)','지하 1-3')");
+        sqlDB1.execSQL("INSERT INTO WheelChairTBL VALUES ('8호선','천호(풍납토성)','지하 1-4')");
 
         sqlDB2 = myHelper.getReadableDatabase();
         Cursor cursor;
