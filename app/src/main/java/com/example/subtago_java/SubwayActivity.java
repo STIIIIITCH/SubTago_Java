@@ -16,7 +16,7 @@ public class SubwayActivity extends AppCompatActivity {
 
         AutoCompleteTextView auto = findViewById(R.id.start_station);
 
-        String[] items = {"안양", "수원", "서울역", "군포", "가산디지털단지"};
+        String[] items = {"안양", "수원", "서울역", "군포", "가산디지털단지", "화서"};
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, items);
 
         auto.setAdapter(adapter);
