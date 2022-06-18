@@ -23,7 +23,7 @@ import java.io.IOException;
 public class SubwayActivity extends AppCompatActivity {
     GestureDetectorCompat gestureDetector;
     SubsamplingScaleImageView imageView;
-    private static final String TAG = "클릭 좌표";
+    private static final String TAG = "* 클릭 좌표";
     Cursor c = null;
 
     @Override
