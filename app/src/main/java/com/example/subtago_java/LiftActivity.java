@@ -27,7 +27,7 @@ public class LiftActivity extends AppCompatActivity {
         btnline6 = findViewById(R.id.btnline6);
         btnline7 = findViewById(R.id.btnline7);
         btnline8 = findViewById(R.id.btnline8);
-        btnline9 = findViewById(R.id.btnline9);
+//        btnline9 = findViewById(R.id.btnline9);
 
         Intent intentline1 = new Intent(this, line1Activity.class);
         Intent intentline2 = new Intent(this, line2Activity.class);
