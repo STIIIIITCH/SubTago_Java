@@ -4,12 +4,15 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class line1Activity extends AppCompatActivity {
     Intent intentMain;
+    Button call1;
 
     MainActivity.myDBHelper myHelper;
     TextView textLine1Result, textStation1Result, textLocation1Result;
@@ -19,6 +22,15 @@ public class line1Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.line1layout);
+        call1 = findViewById(R.id.call1);
+
+        Intent intentline = new Intent(this, call1Activity.class);
+        call1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(intentline);
+            }
+        });
 
         //xml객체 연결
         textLine1Result = findViewById(R.id.textLine1Result);

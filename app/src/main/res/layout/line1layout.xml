@@ -24,6 +24,17 @@
 
     <LinearLayout
         android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/call1"
+            android:backgroundTint="@color/purple_200"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="역무실 번호"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:gravity="center_vertical">

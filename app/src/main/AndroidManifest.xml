@@ -37,7 +37,7 @@
         <activity android:name=".line6Activity"/>
         <activity android:name=".line7Activity"/>
         <activity android:name=".line8Activity"/>
-        <activity android:name=".line9Activity"/>
+        <activity android:name=".call1Activity"/>
 
         <meta-data
             android:name="com.kakao.sdk.AppKey"

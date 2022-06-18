@@ -11,7 +11,7 @@ public class LiftActivity extends AppCompatActivity {
 
     Intent intentMain;
 
-    Button btnline1, btnline2, btnline3, btnline4, btnline5, btnline6, btnline7, btnline8, btnline9;
+    Button btnline1, btnline2, btnline3, btnline4, btnline5, btnline6, btnline7, btnline8;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +27,6 @@ public class LiftActivity extends AppCompatActivity {
         btnline6 = findViewById(R.id.btnline6);
         btnline7 = findViewById(R.id.btnline7);
         btnline8 = findViewById(R.id.btnline8);
-//        btnline9 = findViewById(R.id.btnline9);
 
         Intent intentline1 = new Intent(this, line1Activity.class);
         Intent intentline2 = new Intent(this, line2Activity.class);
@@ -37,7 +36,6 @@ public class LiftActivity extends AppCompatActivity {
         Intent intentline6 = new Intent(this, line6Activity.class);
         Intent intentline7 = new Intent(this, line7Activity.class);
         Intent intentline8 = new Intent(this, line8Activity.class);
-        Intent intentline9 = new Intent(this, line9Activity.class);
 
         btnline1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -85,12 +83,6 @@ public class LiftActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(intentline8);
-            }
-        });
-        btnline9.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(intentline9);
             }
         });
 
