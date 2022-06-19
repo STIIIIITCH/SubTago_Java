@@ -21,6 +21,7 @@ import com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView;
 import java.io.IOException;
 
 public class SubwayActivity extends AppCompatActivity {
+    public static final String ROOT_DIR = "/data/data/com.ac.yeonsung.mj.subwaymap/databases/";
     GestureDetectorCompat gestureDetector;
     SubsamplingScaleImageView imageView;
     private static final String TAG = "* 클릭 좌표";
@@ -55,10 +56,16 @@ public class SubwayActivity extends AppCompatActivity {
 
         imageView = findViewById(R.id.subwayImage); // 지하철역 고해상도 이미지뷰
         imageView.setImage(ImageSource.resource(R.drawable.smap_sg_all));
-        imageView.setOnTouchListener(touchListener);
+//        imageView.setOnTouchListener(touchListener);
         imageView.setMinimumScaleType(SubsamplingScaleImageView.SCALE_TYPE_CUSTOM);
-        imageView.setMaximumDpi(900);
-//        imageView.setScaleAndCenter(2f, new PointF(1698, 2571)); // 안양역
+        imageView.setMaximumDpi(1100);
+        imageView.setMinimumDpi(300);
+
+        GestureDetector gestureDetector = getGestureDetector(imageView);
+        imageView.setOnTouchListener((v, event) -> {
+            gestureDetector.onTouchEvent(event);
+            return false;
+        });
 
 
 
@@ -72,7 +79,9 @@ public class SubwayActivity extends AppCompatActivity {
 //        float relativeY = (event.getY() - values[5]) / values[4];
 
 
-        gestureDetector = new GestureDetectorCompat(this, new MyGestureListener());
+//        gestureDetector = new GestureDetectorCompat(this, new MyGestureListener());
+
+
 
     }
 
@@ -98,8 +107,7 @@ public class SubwayActivity extends AppCompatActivity {
         }
     };
 
-
-    class MyGestureListener extends GestureDetector.SimpleOnGestureListener {
+/*    class MyGestureListener extends GestureDetector.SimpleOnGestureListener {
         @Override
         public boolean onDown(MotionEvent touch) {
             if (imageView.isReady()) {
@@ -110,7 +118,7 @@ public class SubwayActivity extends AppCompatActivity {
                 // Loop for finding the station.
                 if (c.moveToFirst()) {
                     do {
-
+                        Log.d("커서 테스트 >> ",  "커서 꺼짐 ? " + c.isClosed() + "커서 마지막인가요 ? " + c.isLast() + "커서 첫 번째인지" + String.valueOf(c.isFirst()));
                         if ((x_cor > c.getInt(2)) && (x_cor < c.getInt(4)) && (y_cor > c.getInt(3)) && (y_cor < c.getInt(5))) {
                             String targetStation = c.getString(1); // 유저가 클릭한 지하철역
                         } // send Station Name (column 1)
@@ -119,6 +127,96 @@ public class SubwayActivity extends AppCompatActivity {
             }
             return super.onSingleTapUp(touch);
         }
-    };
+    };*/
+
+    private GestureDetector getGestureDetector(SubsamplingScaleImageView subsamplingScaleImageView)
+    {
+
+        GestureDetector gestureDetector;
+
+
+        seoulSubwayMap myDbHelper = new seoulSubwayMap(this); // Reading SQLite database.
+        try {
+            myDbHelper.createDataBase();
+        } catch (IOException ioe) {
+            throw new Error("Unable to create database");
+        }
+        finally {
+            myDbHelper.openDataBase();
+
+            Cursor c = myDbHelper.query("seoulSubwayMap", null, null, null, null, null, null); // SQLDataRead
+            gestureDetector = new GestureDetector(this, new GestureDetector.SimpleOnGestureListener() { // gesture 디텍팅으로 지하철 위치 읽기
+                @Override
+                public boolean onSingleTapUp(MotionEvent event) {
+
+                    Log.d("# 픽셀 좌표 테스트 #", "onSingleTapUp");
+                    if(subsamplingScaleImageView.isReady())
+                    {
+                        PointF sCoord = subsamplingScaleImageView.viewToSourceCoord(event.getX(), event.getY());
+                        int x_cor = (int) sCoord.x;
+                        int y_cor = (int) sCoord.y;
+
+                        Log.d("# 픽셀좌표 테스트 1 >> ", "x_cor : " + x_cor +", y_cor : " +y_cor + ", event.x : " +event.getX() + ", event.getY : " + event.getY() );
+
+                        // Loop for finding the station.
+                        if (c.moveToFirst()) {
+                            do {
+
+                                if ((x_cor > c.getInt(2)) && (x_cor < c.getInt(4)) && (y_cor > c.getInt(3)) && (y_cor < c.getInt(5))) {
+                                    String targetStation = c.getString(1); // 좌표를 통해 얻은 유저가 클릭한 지하철역
+                                    Log.d("# 픽셀좌표 테스트 2 >> ", "targetStation : " + targetStation);
+//                                    CustomDialog customDialog = new CustomDialog(mContext, event.getX(), event.getY(),  targetStation);
+//                                    customDialog.create();
+
+/*                                    customDialog.getDialog().setOnDismissListener(new DialogInterface.OnDismissListener() {
+                                        @Override
+                                        public void onDismiss(DialogInterface dialog) {
+
+
+                                            TextView tvSearchStation = findViewById(R.id.tv_serach_station);
+                                            StringBuilder sb = new StringBuilder();
+
+                                            if(StationData.startStation!=null && StationData.startLine!= null){
+
+                                                sb.append("출발역 : ");
+                                                sb.append(StationData.startStation);
+                                                sb.append(" ");
+                                                sb.append(StationData.startLine);
+                                                sb.append("호선");
+                                                sb.append("\n");
+                                            }
+
+                                            if(StationData.goalStation!=null && StationData.goalLine!= null){
+
+                                                sb.append("도착역 : ");
+                                                sb.append(StationData.goalStation);
+                                                sb.append(" ");
+                                                sb.append(StationData.goalLine);
+                                                sb.append("호선");
+                                            }
+
+
+                                            tvSearchStation.setText(sb.toString());
+
+
+                                        }
+                                    });*/
+
+                                } // send Station Name (column 1)
+                            } while (c.moveToNext());
+                        }
+
+                    }
+                    return super.onSingleTapUp(event);
+                }
+            });
+
+        }
+
+        return gestureDetector;
+
+
+
+    }
 
 }
