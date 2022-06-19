@@ -32,13 +32,6 @@ public class SubwayActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.subway_1);
 
-/*        AutoCompleteTextView auto = findViewById(R.id.start_station);
-
-        String[] items = {"안양", "수원", "서울역", "군포"};
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, items);
-
-        auto.setAdapter(adapter);*/
-
         seoulSubwayMap myDbHelper = new seoulSubwayMap(SubwayActivity.this); // Reading SQLite database.
         try {
             myDbHelper.createDataBase();
@@ -56,7 +49,6 @@ public class SubwayActivity extends AppCompatActivity {
 
         imageView = findViewById(R.id.subwayImage); // 지하철역 고해상도 이미지뷰
         imageView.setImage(ImageSource.resource(R.drawable.smap_sg_all));
-//        imageView.setOnTouchListener(touchListener);
         imageView.setMinimumScaleType(SubsamplingScaleImageView.SCALE_TYPE_CUSTOM);
         imageView.setMaximumDpi(1100);
         imageView.setMinimumDpi(300);
@@ -85,27 +77,6 @@ public class SubwayActivity extends AppCompatActivity {
 
     }
 
-    View.OnTouchListener touchListener = new View.OnTouchListener() {
-        @Override
-        public boolean onTouch(View v, MotionEvent event) {
-            float x = event.getX();
-            float y = event.getY();
-
-            switch (event.getActionMasked()) {
-                // 손으로 눌렀을 때
-                case MotionEvent.ACTION_DOWN:
-                    break;
-                // 손을 떼었을 때
-                case MotionEvent.ACTION_UP:
-                    Log.d(TAG, "x 좌표 = " + x + " / y 좌표 = " + y);
-                    break;
-                // 누른 상태로 움직였을 때
-                case MotionEvent.ACTION_MOVE:
-                    break;
-            }
-            return gestureDetector.onTouchEvent(event);
-        }
-    };
 
 /*    class MyGestureListener extends GestureDetector.SimpleOnGestureListener {
         @Override
