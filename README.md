@@ -11,3 +11,14 @@ DB명 : WheelChairDB
 TABLE명 : WheelChairTBL
 기본적으로 myDBHelper로 DB연결 함수 만들어 놓음 변수명은 myHelper로 통일해주길 바람
 //각 코드에 설명은 해둠
+
+
+
+
+# 22.06.19
+SubwayActivity_2 >>>>> kakaoMapActivity
+사용하는 레이아웃 xml >> kakaomap_1
+
+주석 풀 때 주석된 부분 전체 잡고 Ctrl + Shift + /
+
+편의시설이랑 카카오맵만 하면 될 것 같아유'3'
