@@ -21,8 +21,6 @@ import com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView;
 import java.io.IOException;
 
 public class SubwayActivity extends AppCompatActivity {
-    public static final String ROOT_DIR = "/data/data/com.ac.yeonsung.mj.subwaymap/databases/";
-    GestureDetectorCompat gestureDetector;
     SubsamplingScaleImageView imageView;
     private static final String TAG = "* 클릭 좌표";
     Cursor c = null;
