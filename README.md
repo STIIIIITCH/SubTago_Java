@@ -16,8 +16,8 @@ TABLE명 : WheelChairTBL
 
 
 # 22.06.19
-SubwayActivity_2 >>>>> kakaoMapActivity
-사용하는 레이아웃 xml >> kakaomap_1
+▷ SubwayActivity_2 >>>>> kakaoMapActivity
+▷ 사용하는 레이아웃 xml >> kakaomap_1
 
 주석 풀 때 주석된 부분 전체 잡고 Ctrl + Shift + /
 
