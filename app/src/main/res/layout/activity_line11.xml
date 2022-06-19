@@ -237,6 +237,107 @@
                 android:textSize="16sp"
                 android:layout_margin="1dp"/>
         </TableRow>
+        <TableRow>
+            <TextView
+                android:text="1호선"
+                android:padding="3dip"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:layout_margin="3dp"/>
+            <TextView
+                android:text="제기동"
+                android:gravity="center"
+                android:padding="3dip"
+                android:textSize="16sp"
+                android:layout_margin="1dp"/>
+            <TextView
+                android:text="상행 9-4, 하행 2-1"
+                android:gravity="center"
+                android:padding="3dip"
+                android:textSize="16sp"
+                android:layout_margin="1dp"/>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:text="1호선"
+                android:padding="3dip"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:layout_margin="3dp"/>
+            <TextView
+                android:text="종각"
+                android:gravity="center"
+                android:padding="3dip"
+                android:textSize="16sp"
+                android:layout_margin="1dp"/>
+            <TextView
+                android:text="상행 9-4, 하행 4-4"
+                android:gravity="center"
+                android:padding="3dip"
+                android:textSize="16sp"
+                android:layout_margin="1dp"/>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:text="1호선"
+                android:padding="3dip"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:layout_margin="3dp"/>
+            <TextView
+                android:text="종로 3가"
+                android:gravity="center"
+                android:padding="3dip"
+                android:textSize="16sp"
+                android:layout_margin="1dp"/>
+            <TextView
+                android:text="하행 6-4, 12, 13출구 측"
+                android:gravity="center"
+                android:padding="3dip"
+                android:textSize="16sp"
+                android:layout_margin="1dp"/>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:text="1호선"
+                android:padding="3dip"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:layout_margin="3dp"/>
+            <TextView
+                android:text="종로5가"
+                android:gravity="center"
+                android:padding="3dip"
+                android:textSize="16sp"
+                android:layout_margin="1dp"/>
+            <TextView
+                android:text="상행 8-3, 하행 3-2"
+                android:gravity="center"
+                android:padding="3dip"
+                android:textSize="16sp"
+                android:layout_margin="1dp"/>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:text="1호선"
+                android:padding="3dip"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:layout_margin="3dp"/>
+            <TextView
+                android:text="청량리"
+                android:gravity="center"
+                android:padding="3dip"
+                android:textSize="16sp"
+                android:layout_margin="1dp"/>
+            <TextView
+                android:text="6번 출구측"
+                android:gravity="center"
+                android:padding="3dip"
+                android:textSize="16sp"
+                android:layout_margin="1dp"/>
+        </TableRow>
+
 
     </TableLayout>
 
