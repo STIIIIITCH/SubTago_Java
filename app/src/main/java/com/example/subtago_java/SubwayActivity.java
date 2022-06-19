@@ -32,18 +32,6 @@ public class SubwayActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.subway_1);
 
-        seoulSubwayMap myDbHelper = new seoulSubwayMap(SubwayActivity.this); // Reading SQLite database.
-        try {
-            myDbHelper.createDataBase();
-        } catch (IOException ioe) {
-            throw new Error("Unable to create database");
-        }
-        try {
-            myDbHelper.openDataBase();
-        } catch (SQLException sqle) {
-            throw sqle;
-        }
-
         imageView = findViewById(R.id.subwayImage); // 지하철역 고해상도 이미지뷰
         imageView.setImage(ImageSource.resource(R.drawable.smap_sg_all));
         imageView.setMinimumScaleType(SubsamplingScaleImageView.SCALE_TYPE_CUSTOM);
@@ -86,15 +74,14 @@ public class SubwayActivity extends AppCompatActivity {
                         int y_cor = (int) sCoord.y;
 
                         Log.d("# 픽셀좌표 테스트 1 >> ", "x_cor : " + x_cor +", y_cor : " +y_cor + ", event.x : " +event.getX() + ", event.getY : " + event.getY() );
+                        Log.d("커서 테스트 >> ", "닫힘 ? " + c.isClosed() + " / 첫 행에 있음? " + c.isFirst() + " / 마지막 행에 있음? " + c.isLast());
 
                         // Loop for finding the station.
                         if (c.moveToFirst()) {
                             do {
-
                                 if ((x_cor > c.getInt(2)) && (x_cor < c.getInt(4)) && (y_cor > c.getInt(3)) && (y_cor < c.getInt(5))) {
                                     String targetStation = c.getString(1); // 좌표를 통해 얻은 유저가 클릭한 지하철역
                                     Log.d("# 픽셀좌표 테스트 2 >> ", "targetStation : " + targetStation);
-
                                 } // send Station Name (column 1)
                             } while (c.moveToNext());
                         }
