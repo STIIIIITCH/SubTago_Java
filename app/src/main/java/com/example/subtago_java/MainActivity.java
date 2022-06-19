@@ -11,6 +11,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -30,12 +31,23 @@ public class MainActivity extends AppCompatActivity {
         Button btnLift = findViewById(R.id.lift);
         Button btnConvenience = findViewById(R.id.convenience);
 
+        ImageView imglogo = findViewById(R.id.logo);
+
         Intent intentSubway = new Intent(this, SubwayActivity.class);
         Intent intentTransfer = new Intent(this, kakaoMapActivity.class);
         Intent intentLift = new Intent(this, LiftActivity.class);
         Intent intentConvenience = new Intent(this, ConvenienceActivity.class);
+        Intent intentImgLogo = new Intent(this, PostPage.class);
 
         myHelper = new myDBHelper(this);
+
+        imglogo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(intentImgLogo);
+                finish();
+            }
+        });
 
         btnSubway.setOnClickListener(new View.OnClickListener() {
             @Override
