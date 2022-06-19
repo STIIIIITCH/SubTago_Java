@@ -38,6 +38,10 @@
         <activity android:name=".line7Activity"/>
         <activity android:name=".line8Activity"/>
         <activity android:name=".call1Activity"/>
+        <activity android:name=".bikeActivity"/>
+        <activity android:name=".line1Activity1"/>
+        <activity android:name=".cutomerActivity"/>
+        <activity android:name=".placeActivity"/>
 
         <meta-data
             android:name="com.kakao.sdk.AppKey"
