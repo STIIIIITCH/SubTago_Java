@@ -1,4 +1,3 @@
-/*
 package com.example.subtago_java;
 
 import android.Manifest;
@@ -14,13 +13,14 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import net.daum.mf.map.api.MapPoint;
 import net.daum.mf.map.api.MapView;
 
-public class kakaoMapActivity {
+public class kakaoMapActivity extends AppCompatActivity {
     Intent intentMain;
     MapView mapView;
     String provider;
@@ -33,7 +33,7 @@ public class kakaoMapActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.kakaomap_1);
 
-        // 위치 권한 요청 코드
+/*        // 위치 권한 요청 코드
         int permissionCheck = ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION);
 
 
@@ -88,7 +88,7 @@ public class kakaoMapActivity {
     View.OnClickListener myLocation = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            Toast.makeText(SubwayActivity.this, "불러옵니다.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(kakaoMapActivity.this, "불러옵니다.", Toast.LENGTH_SHORT).show();
             mapView.setMapCenterPoint(MapPoint.mapPointWithGeoCoord(latitude, longitude), true);
 
         }
@@ -114,10 +114,10 @@ public class kakaoMapActivity {
         }
     };
 
-    @Override
-    public void onBackPressed() {
-        startActivity(intentMain);
-        finish();
+        @Override
+        public void onBackPressed () {
+            startActivity(intentMain);
+            finish();
+        }*/
     }
 }
-*/

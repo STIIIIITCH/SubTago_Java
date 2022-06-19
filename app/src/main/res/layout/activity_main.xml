@@ -40,7 +40,7 @@
                 android:layout_height="60dp"
                 android:backgroundTint="@color/green"
                 android:textSize="23sp"
-                android:text="@string/transfer" />
+                android:text="길찾기" />
             <Button
                 android:id="@+id/lift"
                 android:layout_width="180dp"

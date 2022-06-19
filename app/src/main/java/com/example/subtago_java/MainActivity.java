@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         Button btnConvenience = findViewById(R.id.convenience);
 
         Intent intentSubway = new Intent(this, SubwayActivity.class);
-        Intent intentTransfer = new Intent(this, TransferActivity.class);
+        Intent intentTransfer = new Intent(this, kakaoMapActivity.class);
         Intent intentLift = new Intent(this, LiftActivity.class);
         Intent intentConvenience = new Intent(this, ConvenienceActivity.class);
 
