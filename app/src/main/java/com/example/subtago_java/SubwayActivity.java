@@ -44,9 +44,6 @@ public class SubwayActivity extends AppCompatActivity {
             throw sqle;
         }
 
-        c = myDbHelper.query("seoulSubwayMap", null, null, null, null, null, null); // SQLDataRead
-
-
         imageView = findViewById(R.id.subwayImage); // 지하철역 고해상도 이미지뷰
         imageView.setImage(ImageSource.resource(R.drawable.smap_sg_all));
         imageView.setMinimumScaleType(SubsamplingScaleImageView.SCALE_TYPE_CUSTOM);
