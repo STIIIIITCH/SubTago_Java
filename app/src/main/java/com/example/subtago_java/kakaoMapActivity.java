@@ -33,7 +33,7 @@ public class kakaoMapActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.kakaomap_1);
 
-/*        // 위치 권한 요청 코드
+        // 위치 권한 요청 코드
         int permissionCheck = ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION);
 
 
@@ -114,10 +114,9 @@ public class kakaoMapActivity extends AppCompatActivity {
         }
     };
 
-        @Override
-        public void onBackPressed () {
-            startActivity(intentMain);
-            finish();
-        }*/
+    @Override
+    public void onBackPressed () {
+        startActivity(intentMain);
+        finish();
     }
 }
