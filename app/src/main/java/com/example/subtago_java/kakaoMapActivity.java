@@ -67,15 +67,15 @@ public class kakaoMapActivity extends AppCompatActivity {
                 1,
                 gpsLocationListener);
 
-        MapPOIItem marker = new MapPOIItem();
-        MapPoint nowPosition = MapPoint.mapPointWithGeoCoord(latitude, longitude);
-        marker.setCustomImageResourceId(R.drawable.pin);
-        marker.setItemName("현위치");
-        marker.setMapPoint(nowPosition);
-        marker.setCustomImageAnchor(0.5f, 0.5f);
-        mapView.addPOIItem(marker);
-        mapView.selectPOIItem(marker, true);
-        mapView.setMapCenterPoint(nowPosition, false);
+//        MapPOIItem marker = new MapPOIItem();
+//        MapPoint nowPosition = MapPoint.mapPointWithGeoCoord(latitude, longitude);
+//        marker.setCustomImageResourceId(R.drawable.pin);
+//        marker.setItemName("현위치");
+//        marker.setMapPoint(nowPosition);
+//        marker.setCustomImageAnchor(0.5f, 0.5f);
+//        mapView.addPOIItem(marker);
+//        mapView.selectPOIItem(marker, true);
+//        mapView.setMapCenterPoint(nowPosition, false);
 
 //        mapView.setMapViewEventListener(this);
 //        mapView.setCurrentLocationTrackingMode(MapView.CurrentLocationTrackingMode.TrackingModeOnWithoutHeading);
