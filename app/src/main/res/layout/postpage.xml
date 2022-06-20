@@ -25,14 +25,58 @@
     </LinearLayout>
 
     <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="제목"
+            android:layout_marginRight="20dp"
+            android:textSize="25sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="  제목을 입력하세요"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="내용"
+            android:layout_marginRight="20dp"
+            android:textSize="25sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="  내용을 입력하세요"/>
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:gravity="center">
         <Button
-            android:id="@+id/btnpostinsert"
+            android:id="@+id/btnPostInsert"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="등록하기"
+            android:layout_marginRight="80dp"
             android:backgroundTint="@color/green"/>
+        <Button
+            android:id="@+id/btnPostSelect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="조회하기"
+            android:backgroundTint="@color/teal_700"/>
     </LinearLayout>
 
     <LinearLayout

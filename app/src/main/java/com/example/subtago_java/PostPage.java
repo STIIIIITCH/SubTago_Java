@@ -16,7 +16,7 @@ public class PostPage extends AppCompatActivity {
 
     Intent intentMain;
     TextView textTitleResult;
-    Button btnpostinsert;
+    Button btnPostInsert;
 
     MainActivity.myDBHelper myHelper;
     SQLiteDatabase sqlDB;
@@ -28,10 +28,10 @@ public class PostPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.postpage);
 
-        btnpostinsert = findViewById(R.id.btnpostinsert);
+        btnPostInsert = findViewById(R.id.btnPostInsert);
         Intent intentpostinsert = new Intent(this, PostInsert.class );
 
-        btnpostinsert.setOnClickListener(new View.OnClickListener() {
+        btnPostInsert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(intentpostinsert);
